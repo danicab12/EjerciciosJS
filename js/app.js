@@ -42,15 +42,30 @@ document.getElementById="cuadro";
 
 //Ejercicio 2:
 
-document.body.firstElementChild.style.color = "blue";
+document.body.firstElementChild.style.color = "";
 
-var lista = document.body.getElementsByTagName("li");
-    
-for (let i = 0; i <= lista.length-1; i++) {
-    console.log(lista[i].innerHTML);
-    
+//Ejercicio de añadir a la lista
+
+var lista3 = document.getElementById("lista");
+for(i=4;i<=6;i++){
+    var li = document.createElement("li");
+    var li1Texto = document.createTextNode("object "+i);
+    li.appendChild(li1Texto);
+    lista3.appendChild(li);
 }
 
-var elementos = [4, 5, 6 ];
-elementos.push(4);
-console.log(elementos[0]);
+//Ejercicio de la tabla
+
+var tabla = document.getElementById("tabla").firstElementChild;
+var nombres = tabla.firstElementChild.children[1];
+
+for(i=0;i<=2;i++){
+    nombres.children[i].innerHTML=Math.floor(Math.random()*101);
+}
+
+//Ejercicio de QuerySelector
+
+const enlaces = document.querySelectorAll(".enlace");
+for(i=0;i<enlaces.length;i++){
+    enlaces[i].style.backgroundColor = "Green";
+}
