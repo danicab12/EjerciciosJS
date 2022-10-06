@@ -1,6 +1,5 @@
 
 //Ejercicio 1:
-document.getElementById="cuadro";
     document.body.style.backgroundColor = "aquamarine";
     document.body.style.fontFamily = "Arial";
     document.body.style.color = "red";
@@ -40,11 +39,17 @@ document.getElementById="cuadro";
         }
     }
 
-//Ejercicio 2:
+//Ejercicio cambiar fondo
 
-document.body.firstElementChild.style.color = "";
+document.body.firstChild.style.color = "blue";
 
-//Ejercicio de añadir a la lista
+//Ejercicio iterar y mostrar li
+let lista = document.body.getElementsByTagName("li");
+for(i=0;i<=lista.length-1;i++){
+    console.log(lista[i].innerHTML);
+}
+
+//Ejercicio lista
 
 var lista3 = document.getElementById("lista");
 for(i=4;i<=6;i++){
@@ -54,7 +59,7 @@ for(i=4;i<=6;i++){
     lista3.appendChild(li);
 }
 
-//Ejercicio de la tabla
+//Ejercicio tabla
 
 var tabla = document.getElementById("tabla").firstElementChild;
 var nombres = tabla.firstElementChild.children[1];
@@ -63,9 +68,9 @@ for(i=0;i<=2;i++){
     nombres.children[i].innerHTML=Math.floor(Math.random()*101);
 }
 
-//Ejercicio de QuerySelector
+//Ejercicio QuerySelector
 
 const enlaces = document.querySelectorAll(".enlace");
 for(i=0;i<enlaces.length;i++){
-    enlaces[i].style.backgroundColor = "Green";
+    enlaces[i].style.backgroundColor = "green";
 }
